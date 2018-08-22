@@ -11,7 +11,7 @@
 
 
 ## 사용법
-```mssql
+```sql
 begin tran -- 1. 이렇게 먼저 선언 후
 
 update 테이블명
