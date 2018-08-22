@@ -40,7 +40,7 @@
 
 3. 설마 로그가 다 찼나?  로그를 확인해보자
 
-   ```mssql
+   ```sql
    -- 실제용량 확인
    DBCC SQLPERF(LOGSPACE)
    ```
@@ -49,7 +49,7 @@
 
 4. 로그를 축소하자
 
-   ```mssql
+   ```sql
    --LOG를 지운다. (파일 사이즈는 줄어 들지 않는다.)
    BACKUP LOG 디비명 WITH TRUNCATE_ONLY
    
@@ -67,7 +67,7 @@
 
    그럼 이후 구문도 있을거야 구글링ㄱㄱ
 
-   ```mssql
+   ```sql
    -- 1. 축소 시 속도를 위해 리커버리모드를 SIMPLE로 변경
    ALTER DATABASE 디비명 SET RECOVERY SIMPLE
    
@@ -85,7 +85,7 @@
 ## 정리
 
 mssql2008 이전 
-   ```mssql
+   ```sql
    --LOG를 지운다. (파일 사이즈는 줄어 들지 않는다.)
    BACKUP LOG 디비명 WITH TRUNCATE_ONLY
    
@@ -94,7 +94,7 @@ mssql2008 이전
    ```
 
 mssql2008 이후
-```mssql
+```sql
    -- 1. 축소 시 속도를 위해 리커버리모드를 SIMPLE로 변경
    ALTER DATABASE 디비명 SET RECOVERY SIMPLE
    
